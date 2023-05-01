@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class ucgeninAlani {
+    public static void main(String[] args) {
+      /*  Üç kenar uzunluğunu kullanıcıdan aldığınız üçgenin alanını hesaplayan programı yazınız.
+
+        Formül
+        Üç𝑔𝑒𝑛𝑖𝑛 ç𝑒𝑣𝑟𝑒𝑠𝑖 = 2𝑢
+
+                𝑢 = (a+b+c) / 2
+
+        Alan * Alan = 𝑢 * (𝑢 − 𝑎)* (𝑢 − 𝑏) * (𝑢 − 𝑐)
+        */
+        int kenar1,kenar2,kenar3;
+        double u, ucgeninAlani;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("1.Kenarin uzunlugunu girin: ");
+        kenar1 = input.nextInt();
+        System.out.println("2.Kenarin uzunlugunu girin: ");
+        kenar2 = input.nextInt();
+        System.out.println("3.Kenarin uzunlugunu girin: ");
+        kenar3 = input.nextInt();
+
+        u = (kenar1+kenar2+kenar3)/2;
+        ucgeninAlani = Math.sqrt(u*(u - kenar1)* (u - kenar2) * (u - kenar3));
+
+        System.out.println("Ucgenın Alanı: "+ucgeninAlani);
+
+    }
+}
