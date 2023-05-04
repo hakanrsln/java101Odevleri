@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class usluSayiHesabi {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int n, k,total=1;
+
+        System.out.println("Ussu alinacak sayi:");
+        n = scanner.nextInt();
+        System.out.println("Us olacak sayi:");
+        k = scanner.nextInt();
+
+        for(int i=1;i<=k;i++){
+
+            total= total*n;
+        }
+        System.out.println("Cevap:"+total);
+
+    }
+}
