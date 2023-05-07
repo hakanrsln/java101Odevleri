@@ -1,0 +1,29 @@
+package donguler;
+
+import java.util.Scanner;
+
+public class mukelmmelSayi {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Bir sayi giriniz:");
+        int num = input.nextInt();
+        int total = 0;
+
+
+        for (int i = 1; num > i; i++) {
+
+            if (num % i == 0) {
+                System.out.println(i);
+                total = total + i;
+            }
+        }
+
+        if (num == total) {
+            System.out.println(num + " sayisi Mukemmel sayidir.");
+        } else {
+            System.out.println(num + " sayisi Mukemmel sayi DEGILDIR.");
+        }
+
+
+    }
+}
