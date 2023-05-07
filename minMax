@@ -1,0 +1,44 @@
+package donguler;
+
+import java.util.Scanner;
+
+public class minMaxBulma {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Kac tane tam sayi gireceksiniz:");
+        int numbers = input.nextInt();
+        int min = 0, max = 0, number;
+
+
+        for (int i = 1; i <= numbers; i++) {
+
+            System.out.println(i + ".Sayiyi giriniz:");
+            number = input.nextInt();
+
+            if (number < min || min == 0) {
+                min = number;
+            }
+
+            if (number > max) {
+                max = number;
+            }
+
+
+        }
+
+        System.out.println("Minimum:" + min);
+        System.out.println("Maximum:" + max);
+
+
+
+        /*Senaryo
+Kaç tane sayı gireceksiniz: 4
+1. Sayıyı giriniz: 16
+2. Sayıyı giriniz: -22
+3. Sayıyı giriniz: -15
+4. Sayıyı giriniz: 100
+En büyük sayı: 100
+En küçük sayı: -22*/
+    }
+}
