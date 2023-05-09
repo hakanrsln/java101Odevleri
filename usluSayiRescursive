@@ -1,0 +1,32 @@
+package metotlar;
+
+import java.util.Scanner;
+
+public class usluSayilarRecursive {
+    static int power(int exponent, int base) {
+
+        if (exponent == 1) {
+            return base;
+        }
+        if (exponent == 0) {
+            return 1;
+        }
+
+        return power(exponent - 1, base) * power(1, base);
+
+        // f(1)=base  f(2)= f(1)*f(1)   f(3)=f(2)*f(1)  f(4)=f(3)*f(1)
+        // f(n)=f(n-1)*f(1)
+
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Ust sayisini giriniz :");
+        int a = input.nextInt();
+
+        System.out.println("Taban sayisini giriniz :");
+        int b = input.nextInt();
+        int result = power(a, b);
+        System.out.println("Result:" + result);
+    }
+}
